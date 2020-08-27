@@ -1,6 +1,6 @@
-package InterviewQA.Tree;
+package AllCategory_Coding_Interview_QA.Tree;
 
-import DataStructure.Tree.BinarySearchTrees.BinarySearchTree;
+import Utils.BinarySearchTreeClass;
 
 /**
  * Given a sorted array. Write a function that creates a Balanced Binary Search
@@ -25,7 +25,7 @@ public class SortedArraytoBalancedBST {
 
     static final int DUMMY_VALUE = -1;
 
-    private static void SortedArraytoBalancedBSTMethodRecur(BinarySearchTree<Integer> bst, int[] arr, int minIndex,
+    private static void SortedArraytoBalancedBSTMethodRecur(BinarySearchTreeClass<Integer> bst, int[] arr, int minIndex,
             int maxIndex) {
         if (minIndex <= maxIndex) {
             int midIndex = (int) Math.ceil((minIndex + maxIndex) / 2.0);// round up
@@ -41,7 +41,7 @@ public class SortedArraytoBalancedBST {
     }
 
     public static void SortedArraytoBalancedBSTMethod(int[] arr) {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        BinarySearchTreeClass<Integer> bst = new BinarySearchTreeClass<>();
 
         int minIndex = 0;
         int maxIndex = arr.length - 1;

@@ -1,8 +1,8 @@
-package InterviewQA.LinkedList;
+package AllCategory_Coding_Interview_QA.LinkedList;
 
 import java.util.ArrayList;
 
-import DataStructure.LinkedList.NodeClass;
+import Utils.NodeClass;
 
 /**
  * Given a Linked List and a number k, write a function that remove the value at

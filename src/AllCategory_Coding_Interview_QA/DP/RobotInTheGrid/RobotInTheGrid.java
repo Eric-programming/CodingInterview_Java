@@ -1,4 +1,4 @@
-package InterviewQA.DP.RobotInTheGrid;
+package AllCategory_Coding_Interview_QA.DP.RobotInTheGrid;
 
 import java.util.*;
 
@@ -16,14 +16,17 @@ public class RobotInTheGrid {
         boolean[][] grid1 = { { true, false, true, false }, { true, true, true, true }, { true, false, false, true },
                 { false, false, false, true }, { false, false, false, true } };
 
-        boolean[][] grid2 = { { true, false, true, false }, { false, true, false, false }, { true, false, false, true },
-                { false, false, false, true }, { false, false, false, true } };
+        // boolean[][] grid2 = { { true, false, true, false }, { false, true, false,
+        // false }, { true, false, false, true },
+        // { false, false, false, true }, { false, false, false, true } };
 
-        boolean[][] grid3 = { { true, true, true, false }, { false, true, true, true }, { true, false, false, true },
-                { false, false, false, true }, { true, true, true, true } };
+        // boolean[][] grid3 = { { true, true, true, false }, { false, true, true, true
+        // }, { true, false, false, true },
+        // { false, false, false, true }, { true, true, true, true } };
 
-        boolean[][] grid4 = { { true, true, true, true }, { true, false, false, true }, { true, true, true, true },
-                { true, false, false, true }, { true, true, true, true }, };
+        // boolean[][] grid4 = { { true, true, true, true }, { true, false, false, true
+        // }, { true, true, true, true },
+        // { true, false, false, true }, { true, true, true, true }, };
 
         System.out.println(findWay(grid1));
     }

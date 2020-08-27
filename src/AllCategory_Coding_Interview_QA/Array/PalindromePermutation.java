@@ -1,4 +1,4 @@
-package InterviewQA.Array;
+package AllCategory_Coding_Interview_QA.Array;
 
 import java.util.Hashtable;
 

@@ -1,4 +1,4 @@
-package InterviewQA.Stack;
+package AllCategory_Coding_Interview_QA.Stack;
 
 import java.util.Stack;
 

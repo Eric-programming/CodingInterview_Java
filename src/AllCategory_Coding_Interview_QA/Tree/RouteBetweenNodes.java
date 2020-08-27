@@ -1,8 +1,8 @@
-package InterviewQA.Tree;
+package AllCategory_Coding_Interview_QA.Tree;
 
 import java.util.*;
 
-import DataStructure.Graphs.GraphClass;
+import Utils.GraphClass;
 
 /**
  * Route Between Nodes: Given a directed graph, design an algorithm to find out

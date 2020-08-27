@@ -1,5 +1,4 @@
-package InterviewQA.DP.ClimbingStairs;
-
+package AllCategory_Coding_Interview_QA.DP.ClimbingStairs;
 import java.util.*;
 
 /**

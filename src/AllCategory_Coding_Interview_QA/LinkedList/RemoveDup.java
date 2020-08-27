@@ -2,13 +2,12 @@
  * Write a removeDuplicates() function which takes a linkedlist and deletes any
  * duplicate nodes from the list. The list is not sorted.
  */
-
-package InterviewQA.LinkedList;
+package AllCategory_Coding_Interview_QA.LinkedList;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import DataStructure.LinkedList.NodeClass;
+import Utils.NodeClass;
 
 public class RemoveDup {
 
