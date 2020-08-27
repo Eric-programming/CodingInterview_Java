@@ -27,7 +27,7 @@ public class HouseRobber2 {
         // 0 -> nums.length -2 OR 1-> nums.length-1
         int opt1 = cacluateMaxRob(nums, 0, nums.length - 2);
         int opt2 = cacluateMaxRob(nums, 1, nums.length - 1);
-        return opt1 < opt2 ? opt2 : opt1;
+        return Math.max(opt1, opt2);
     }
 
     public static int cacluateMaxRob(int[] nums, int start, int end) {
