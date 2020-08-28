@@ -1,5 +1,8 @@
 package AllCategory_Coding_Interview_QA.DP.UniquePaths;
 
+/**
+ * https://leetcode.com/problems/unique-paths/description/
+ */
 public class UniquePaths {
     public static void main(String[] args) {
         System.out.println(uniquePaths(3, 7));// 28
