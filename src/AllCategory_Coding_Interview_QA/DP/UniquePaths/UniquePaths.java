@@ -15,7 +15,7 @@ public class UniquePaths {
         if (m == 0 || n == 0) {
             return 1;
         }
-        // create a dpArr filled with 1
+        // create a dpArr filled
         int[][] dpArr = new int[m][n];// m = y, n = x
 
         for (int y = 0; y < m; y++) {
