@@ -1,4 +1,4 @@
-package AllCategory_Coding_Interview_QA.DP.ClimbingStairs;
+package Top_Coding_Interview_QA.No_70_Climbing_Stairs;
 
 /**
  * https://leetcode.com/problems/climbing-stairs/description/

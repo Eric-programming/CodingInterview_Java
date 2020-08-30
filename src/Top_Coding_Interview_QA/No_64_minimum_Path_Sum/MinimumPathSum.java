@@ -1,4 +1,4 @@
-package AllCategory_Coding_Interview_QA.DP.MinimumPathSum;
+package Top_Coding_Interview_QA.No_64_minimum_Path_Sum;
 
 /**
  * https://leetcode.com/problems/minimum-path-sum/description/
