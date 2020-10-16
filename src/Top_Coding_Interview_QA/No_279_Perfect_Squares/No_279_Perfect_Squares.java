@@ -1,7 +1,6 @@
 package Top_Coding_Interview_QA.No_279_Perfect_Squares;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class No_279_Perfect_Squares {
     public static void main(String[] args) {

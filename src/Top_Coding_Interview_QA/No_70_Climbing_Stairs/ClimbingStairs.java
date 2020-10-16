@@ -22,15 +22,15 @@ public class ClimbingStairs {
     }
 
     public static int ClimbingStairMethod(int n) {
-        int[] dpArr = new int[n + 1];
-        for (int i = 0; i < dpArr.length; i++) {
-            if (i < 4) {
-                dpArr[i] = i;
-            } else {
-                dpArr[i] = dpArr[i - 1] + dpArr[i - 2];
-            }
+        if (n < 4) {
+            return n;
         }
-        return dpArr[dpArr.length - 1];
+        int p1 = 2, p2 = 3;
+        for (int i = 4; i < n; i++) {
+            int temp = p2;
+            p2 += p1;
+            p1 = temp;
+        }
+        return p1 + p2;
     }
-
 }
