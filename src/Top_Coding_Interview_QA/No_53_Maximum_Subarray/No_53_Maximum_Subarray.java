@@ -28,9 +28,7 @@ public class No_53_Maximum_Subarray {
         int max = dpArr[0];
         for (int i = 1; i < dpArr.length; i++) {
             dpArr[i] = Math.max(dpArr[i - 1] + nums[i], nums[i]);
-            if (max < dpArr[i]) {
-                max = dpArr[i];
-            }
+            max = Math.max(dpArr[i], max);
         }
         return max;
     }
