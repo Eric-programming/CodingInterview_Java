@@ -1,7 +1,5 @@
 package Top_Coding_Interview_QA.No_198_House_Robber;
 
-import java.util.Arrays;
-
 /**
  * https://leetcode.com/problems/house-robber/description/
  */
