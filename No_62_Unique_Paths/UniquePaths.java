@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_62_Unique_Paths;
 
 /**
  * https://leetcode.com/problems/unique-paths/description/

@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_279_Perfect_Squares;
 
 import java.util.Arrays;
 

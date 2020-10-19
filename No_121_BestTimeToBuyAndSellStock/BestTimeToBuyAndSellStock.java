@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_121_BestTimeToBuyAndSellStock;
 
 /**
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/

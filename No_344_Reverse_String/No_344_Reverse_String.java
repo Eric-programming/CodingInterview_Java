@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_344_Reverse_String;
 
 public class No_344_Reverse_String {
     public static void main(String[] args) {

@@ -1,5 +1,3 @@
-package Top_Coding_Interview_QA.No_1_Two_Sum;
-
 import java.util.Arrays;
 import java.util.HashMap;
 

@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_53_Maximum_Subarray;
 
 /**
  * https://leetcode.com/problems/maximum-subarray/submissions/

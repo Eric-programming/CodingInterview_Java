@@ -1,4 +1,3 @@
-package Top_Coding_Interview_QA.No_198_House_Robber;
 
 /**
  * https://leetcode.com/problems/house-robber/description/

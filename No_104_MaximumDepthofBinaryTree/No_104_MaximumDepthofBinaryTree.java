@@ -1,5 +1,3 @@
-package Top_Coding_Interview_QA.No_104_MaximumDepthofBinaryTree;
-
 /**
  * No_104_MaximumDepthofBinaryTree
  */
