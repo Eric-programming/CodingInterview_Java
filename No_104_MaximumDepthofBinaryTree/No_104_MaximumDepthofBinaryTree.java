@@ -26,7 +26,8 @@ public class No_104_MaximumDepthofBinaryTree {
     }
 
     public static int maxDepth2(TreeNode root) {
-
+        if (root == null)
+            return 0;
         HashMap<TreeNode, Integer> TrackLevel = new HashMap<>();// HashMap Track
         Queue<TreeNode> visited = new LinkedList<>();// Visited Queue
         int maxDepthValue = 1;
