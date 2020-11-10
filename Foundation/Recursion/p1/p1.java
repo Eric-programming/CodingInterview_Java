@@ -8,9 +8,9 @@ import java.util.Arrays;
 public class p1 {
 
     public static void main(String[] args) {
-        char[] str = { 'E', 'R', 'I', 'C' };
-        warm_up(str);
-        // reverseString(str);
+        char[] str = { 'E', 'R', 'I', 'C' };// CIRE
+        // warm_up(str);
+        reverseString(str);
     }
 
     /**
@@ -21,15 +21,15 @@ public class p1 {
         System.out.println(word);
     }
 
-    public static String warm_up_recur(char[] str, int index) {
+    public static String warm_up_recur(char[] charArr, int index) {
         // filter data
-        if (str == null || str.length == 0) {
+        if (charArr == null || charArr.length == 0) {
             return null;
         }
         if (index == 0) {
-            return str[index] + "";
+            return charArr[index] + "";
         }
-        return str[index] + warm_up_recur(str, index - 1);
+        return charArr[index] + warm_up_recur(charArr, index - 1);
     }
 
     /**
@@ -45,6 +45,7 @@ public class p1 {
 
     public static void reverseStringRecur(char[] s, int f, int l) {
         if (f < l) {
+            // swap position
             char temp = s[f];
             s[f] = s[l];
             s[l] = temp;
