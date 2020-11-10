@@ -1,16 +1,16 @@
-package Recursion.Recursion_p1;
+package Recursion.p1;
 
 import java.util.Arrays;
 
 /**
- * Recursion_p1
+ * p1
  */
-public class Recursion_p1 {
+public class p1 {
 
     public static void main(String[] args) {
         char[] str = { 'E', 'R', 'I', 'C' };
-        // warm_up(str);
-        reverseString(str);
+        warm_up(str);
+        // reverseString(str);
     }
 
     /**
@@ -22,6 +22,7 @@ public class Recursion_p1 {
     }
 
     public static String warm_up_recur(char[] str, int index) {
+        // filter data
         if (str == null || str.length == 0) {
             return null;
         }

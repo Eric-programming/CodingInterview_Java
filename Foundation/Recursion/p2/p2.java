@@ -1,9 +1,9 @@
-package Recursion.Recursion_p2;
+package Recursion.p2;
 
 /**
- * Recursion_p2
+ * p2
  */
-public class Recursion_p2 {
+public class p2 {
     public static void main(String[] args) {
         ListNode node3 = new ListNode(7);
         ListNode node2 = new ListNode(2, node3);
