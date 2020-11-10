@@ -1,4 +1,4 @@
-package Recursion.p4;
+// package Recursion.p4;
 
 public class p4 {
     public static void main(String[] args) {
@@ -8,6 +8,8 @@ public class p4 {
         ListNode node0 = new ListNode(1, node1);
         ListNode head = new ListNode(6, node0);
         // 61327 => 72316
+        head = reverseList(head);
+        IterateLinkedlist(head);
     }
 
     public static class ListNode {
@@ -31,19 +33,24 @@ public class p4 {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode returnNodeFromBackTracking = reverseList(head.next);
-        returnNodeFromBackTracking.next = head;
-
+        ListNode rightNode = reverseList(head.next);
+        swap(head, rightNode);
+        return rightNode;
     }
 
-    public static void swap(ListNode head) {
-        ListNode temp = head;
-
+    public static void swap(ListNode leftNode, ListNode rightNode) {
+        if(rightNode == null){
+            return;
+        }
+        ListNode temp = rightNode.next;
+        rightNode.next = leftNode;
+        leftNode.next = temp;
+        swap(leftNode, leftNode.next);
     }
 
-    public static ListNode reverseListIteratively(ListNode head) {
+    // public static ListNode reverseListIteratively(ListNode head) {
 
-    }
+    // }
 
     public static void IterateLinkedlist(ListNode head) {
         if (head == null) {
