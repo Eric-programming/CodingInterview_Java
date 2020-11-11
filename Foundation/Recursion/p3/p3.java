@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class p3 {
     public static void main(String[] args) {
-        System.out.println(getRow(4));
+        System.out.println(getRow(40));
     }
 
     public static List<Integer> getRow(int rowIndex) {
@@ -27,20 +27,21 @@ public class p3 {
             Arrays.fill(dpArr[i], -1);
         }
         for (int j = 0; j < maxLength; j++) {
-            if (dpArr[rowIndex][j] == -1) {
-                dpArr[rowIndex][j] = getValue(rowIndex, j);
-            }
-            int existedValue = dpArr[rowIndex][j];
+            int existedValue = getValue(rowIndex, j, dpArr);
             numArr.add(existedValue);
         }
         return numArr;
     }
 
-    public static Integer getValue(int i, int j) {
+    public static Integer getValue(int i, int j, int[][] dpArr) {
+        if (dpArr[i][j] != -1) {
+            return dpArr[i][j];
+        }
         if (j == i || j == 0) {
             return 1;
         }
-        return getValue(i - 1, j - 1) + getValue(i - 1, j);
+        dpArr[i][j] = getValue(i - 1, j - 1, dpArr) + getValue(i - 1, j, dpArr);
+        return dpArr[i][j];
     }
 
     // public static List<Integer> getRow(int rowIndex) {
