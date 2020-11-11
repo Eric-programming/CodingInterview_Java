@@ -21,9 +21,9 @@ public class p5_700_Search_in_a_BinarySearchTree {
             return root;
         }
         if (val > root.val) {
-            return searchBST(root.right, val);
+            return searchBST(root.right, val);// search right side
         } else {
-            return searchBST(root.left, val);
+            return searchBST(root.left, val);// search left side
         }
     }
 

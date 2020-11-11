@@ -19,52 +19,52 @@ public class p3_119_Pascal_Triangle_II {
         System.out.println(getRow(4));
     }
 
-    public static List<Integer> getRow(int rowIndex) {
-        int maxLength = rowIndex + 1;
-        List<Integer> numArr = new ArrayList<>();
-        int[][] dpArr = new int[rowIndex + 1][rowIndex + 1];
-        for (int i = 0; i < dpArr.length; i++) {
-            Arrays.fill(dpArr[i], -1);
-        }
-        for (int j = 0; j < maxLength; j++) {
-            int existedValue = getValue(rowIndex, j, dpArr);
-            numArr.add(existedValue);
-        }
-        return numArr;
-    }
-
-    public static Integer getValue(int i, int j, int[][] dpArr) {
-        if (dpArr[i][j] != -1) {
-            return dpArr[i][j];
-        }
-        if (j == i || j == 0) {
-            return 1;
-        }
-        dpArr[i][j] = getValue(i - 1, j - 1, dpArr) + getValue(i - 1, j, dpArr);
-        return dpArr[i][j];
-    }
-
     // public static List<Integer> getRow(int rowIndex) {
-    // List<Integer> preRow = new ArrayList<>();
-    // preRow.add(1);
-    // if (rowIndex == 0) {
-    // return preRow;
+    // int maxLength = rowIndex + 1;
+    // List<Integer> numArr = new ArrayList<>();
+    // int[][] dpArr = new int[rowIndex + 1][rowIndex + 1];
+    // for (int i = 0; i < dpArr.length; i++) {
+    // Arrays.fill(dpArr[i], -1);
     // }
-    // preRow.add(1);
-    // if (rowIndex == 1) {
-    // return preRow;
+    // for (int j = 0; j < maxLength; j++) {
+    // int existedValue = getValue(rowIndex, j, dpArr);
+    // numArr.add(existedValue);
     // }
-    // for (int i = 2; i < rowIndex + 1; i++) {
-    // List<Integer> currentRow = new ArrayList<>();
-    // // First
-    // currentRow.add(1);
-    // for (int j = 1; j < preRow.size(); j++) {
-    // currentRow.add(preRow.get(j) + preRow.get(j - 1));
+    // return numArr;
     // }
-    // // Last
-    // currentRow.add(1);
-    // preRow = currentRow;
+
+    // public static Integer getValue(int i, int j, int[][] dpArr) {
+    // if (dpArr[i][j] != -1) {
+    // return dpArr[i][j];
     // }
-    // return preRow;
+    // if (j == i || j == 0) {
+    // return 1;
     // }
+    // dpArr[i][j] = getValue(i - 1, j - 1, dpArr) + getValue(i - 1, j, dpArr);
+    // return dpArr[i][j];
+    // }
+
+    public static List<Integer> getRow(int rowIndex) {
+        List<Integer> preRow = new ArrayList<>();
+        preRow.add(1);
+        if (rowIndex == 0) {
+            return preRow;
+        }
+        preRow.add(1);
+        if (rowIndex == 1) {
+            return preRow;
+        }
+        for (int i = 2; i < rowIndex + 1; i++) {
+            List<Integer> currentRow = new ArrayList<>();
+            // First
+            currentRow.add(1);
+            for (int j = 1; j < preRow.size(); j++) {
+                currentRow.add(preRow.get(j) + preRow.get(j - 1));
+            }
+            // Last
+            currentRow.add(1);
+            preRow = currentRow;
+        }
+        return preRow;
+    }
 }
