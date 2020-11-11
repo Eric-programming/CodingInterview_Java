@@ -1,6 +1,6 @@
-package Recursion.p5;
+package Recursion.p5_700_Search_in_a_BinarySearchTree;
 
-public class p5 {
+public class p5_700_Search_in_a_BinarySearchTree {
 
     public static void main(String[] args) {
         TreeNode node5 = new TreeNode(3);

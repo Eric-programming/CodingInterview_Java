@@ -1,6 +1,6 @@
-package Recursion.p4;
+package Recursion.p4_206_Reverse_LinkedList;
 
-public class p4 {
+public class p4_206_Reverse_LinkedList {
     public static void main(String[] args) {
         ListNode node1 = new ListNode(3);
         ListNode node0 = new ListNode(1, node1);

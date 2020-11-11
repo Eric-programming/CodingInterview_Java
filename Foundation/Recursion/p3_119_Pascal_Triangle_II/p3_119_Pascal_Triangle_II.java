@@ -1,4 +1,4 @@
-package Recursion.p3;
+package Recursion.p3_119_Pascal_Triangle_II;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,9 +14,9 @@ import java.util.List;
  * 
  * Base case f(i,j) = 1 when j = 1 or j = i
  */
-public class p3 {
+public class p3_119_Pascal_Triangle_II {
     public static void main(String[] args) {
-        System.out.println(getRow(40));
+        System.out.println(getRow(4));
     }
 
     public static List<Integer> getRow(int rowIndex) {

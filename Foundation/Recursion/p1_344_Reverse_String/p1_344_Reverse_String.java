@@ -1,11 +1,8 @@
-package Recursion.p1;
+package Recursion.p1_344_Reverse_String;
 
 import java.util.Arrays;
 
-/**
- * p1
- */
-public class p1 {
+public class p1_344_Reverse_String {
 
     public static void main(String[] args) {
         char[] str = { 'E', 'R', 'I', 'C' };// CIRE

@@ -1,9 +1,6 @@
-package Recursion.p2;
+package Recursion.p2_24_Swap_Nodes_in_Pairs;
 
-/**
- * p2
- */
-public class p2 {
+public class p2_24_Swap_Nodes_in_Pairs {
     public static void main(String[] args) {
         ListNode node3 = new ListNode(7);
         ListNode node2 = new ListNode(2, node3);
