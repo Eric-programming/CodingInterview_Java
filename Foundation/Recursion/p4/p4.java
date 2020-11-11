@@ -1,13 +1,11 @@
-// package Recursion.p4;
+package Recursion.p4;
 
 public class p4 {
     public static void main(String[] args) {
-        ListNode node3 = new ListNode(7);
-        ListNode node2 = new ListNode(2, node3);
-        ListNode node1 = new ListNode(3, node2);
+        ListNode node1 = new ListNode(3);
         ListNode node0 = new ListNode(1, node1);
         ListNode head = new ListNode(6, node0);
-        // 61327 => 72316
+        // 613 => 316
         head = reverseList(head);
         IterateLinkedlist(head);
     }
@@ -30,27 +28,26 @@ public class p4 {
     }
 
     public static ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head == null || head.next == null)
             return head;
-        }
-        ListNode rightNode = reverseList(head.next);
-        swap(head, rightNode);
-        return rightNode;
+        ListNode p = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
     }
 
-    public static void swap(ListNode leftNode, ListNode rightNode) {
-        if(rightNode == null){
-            return;
+    public static ListNode reverseListIteratively(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode curNode = head, pre = null, nextNode = null;
+        while (curNode != null) {
+            nextNode = curNode.next;
+            curNode.next = pre;
+            pre = curNode;
+            curNode = nextNode;
         }
-        ListNode temp = rightNode.next;
-        rightNode.next = leftNode;
-        leftNode.next = temp;
-        swap(leftNode, leftNode.next);
+        return pre;
     }
-
-    // public static ListNode reverseListIteratively(ListNode head) {
-
-    // }
 
     public static void IterateLinkedlist(ListNode head) {
         if (head == null) {
