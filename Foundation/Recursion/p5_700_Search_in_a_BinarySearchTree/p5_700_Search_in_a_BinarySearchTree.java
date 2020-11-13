@@ -1,5 +1,6 @@
 package Recursion.p5_700_Search_in_a_BinarySearchTree;
 
+import Utils.PrintBST;
 import Utils.TreeNode;
 
 public class p5_700_Search_in_a_BinarySearchTree {
@@ -12,7 +13,7 @@ public class p5_700_Search_in_a_BinarySearchTree {
         TreeNode node = new TreeNode(4, node2, node3);
 
         // print2D(node);
-        print2D(searchBST(node, 2));
+        PrintBST.print2D(searchBST(node, 2));
     }
 
     public static TreeNode searchBST(TreeNode root, int val) {
@@ -29,35 +30,4 @@ public class p5_700_Search_in_a_BinarySearchTree {
         }
     }
 
-    static final int COUNT = 10;
-
-    // Function to print binary tree in 2D
-    // It does reverse inorder traversal
-    public static void print2DUtil(TreeNode root, int space) {
-        // Base case
-        if (root == null)
-            return;
-
-        // Increase distance between levels
-        space += COUNT;
-
-        // Process right child first
-        print2DUtil(root.right, space);
-
-        // Print current node after space
-        // count
-        System.out.print("\n");
-        for (int i = COUNT; i < space; i++)
-            System.out.print(" ");
-        System.out.print(root.val + "\n");
-
-        // Process left child
-        print2DUtil(root.left, space);
-    }
-
-    // Wrapper over print2DUtil()
-    public static void print2D(TreeNode root) {
-        // Pass initial space count as 0
-        print2DUtil(root, 0);
-    }
 }

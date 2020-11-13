@@ -1,5 +1,8 @@
 package Recursion.p8_21_Merge_Two_Sorted_Lists;
 
+import Utils.ListNode;
+import Utils.PrintLinkedList;
+
 public class p8_21_Merge_Two_Sorted_Lists {
     public static void main(String[] args) {
         ListNode nodeA3 = new ListNode(10, null);
@@ -12,7 +15,7 @@ public class p8_21_Merge_Two_Sorted_Lists {
         ListNode nodeB1 = new ListNode(2, nodeB2);
         ListNode nodeB0 = new ListNode(1, nodeB1);// HeadB
         // IterateLinkedlist(nodeB0);
-        IterateLinkedlist(mergeTwoLists(nodeA0, nodeB0));
+        PrintLinkedList.IterateLinkedlist(mergeTwoLists(nodeA0, nodeB0));
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -91,31 +94,4 @@ public class p8_21_Merge_Two_Sorted_Lists {
 
     }
 
-    public static void IterateLinkedlist(ListNode head) {
-        if (head == null) {
-            return;
-        }
-        while (head.next != null) {
-            System.out.println(head.val);
-            head = head.next;
-        }
-        System.out.println(head.val);
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }

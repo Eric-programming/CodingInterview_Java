@@ -3,9 +3,17 @@ package Recursion.p11_95_Unique_Binary_Search_Trees_II;
 import java.util.ArrayList;
 import java.util.List;
 
+import Utils.PrintBST;
 import Utils.TreeNode;
 
 public class p11_95_Unique_Binary_Search_Trees_II {
+    public static void main(String[] args) {
+        List<TreeNode> list = generateTrees(3);
+        for (TreeNode treeNode : list) {
+            PrintBST.print2D(treeNode);
+            System.out.println("////////////////////////////////////");
+        }
+    }
 
     public static List<TreeNode> generateTrees(int n) {
         if (n == 0) {

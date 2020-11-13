@@ -1,5 +1,8 @@
 package Recursion.p4_206_Reverse_LinkedList;
 
+import Utils.ListNode;
+import Utils.PrintLinkedList;
+
 public class p4_206_Reverse_LinkedList {
     public static void main(String[] args) {
         ListNode node1 = new ListNode(3);
@@ -7,24 +10,7 @@ public class p4_206_Reverse_LinkedList {
         ListNode head = new ListNode(6, node0);
         // 613 => 316
         head = reverseList(head);
-        IterateLinkedlist(head);
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
+        PrintLinkedList.IterateLinkedlist(head);
     }
 
     public static ListNode reverseList(ListNode head) {
@@ -47,17 +33,6 @@ public class p4_206_Reverse_LinkedList {
             curNode = nextNode;
         }
         return pre;
-    }
-
-    public static void IterateLinkedlist(ListNode head) {
-        if (head == null) {
-            return;
-        }
-        while (head.next != null) {
-            System.out.println(head.val);
-            head = head.next;
-        }
-        System.out.println(head.val);
     }
 
 }

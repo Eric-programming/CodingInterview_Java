@@ -1,5 +1,8 @@
 package Recursion.p2_24_Swap_Nodes_in_Pairs;
 
+import Utils.ListNode;
+import Utils.PrintLinkedList;
+
 public class p2_24_Swap_Nodes_in_Pairs {
     public static void main(String[] args) {
         ListNode node3 = new ListNode(7);
@@ -9,24 +12,7 @@ public class p2_24_Swap_Nodes_in_Pairs {
         ListNode head = new ListNode(6, node0);
         // 61327 => 16237
         head = swapPairs(head);
-        IterateLinkedlist(head);
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
+        PrintLinkedList.IterateLinkedlist(head);
     }
 
     public static ListNode swapPairs(ListNode head) {
@@ -56,14 +42,4 @@ public class p2_24_Swap_Nodes_in_Pairs {
         return head;
     }
 
-    public static void IterateLinkedlist(ListNode head) {
-        if (head == null) {
-            return;
-        }
-        while (head.next != null) {
-            System.out.println(head.val);
-            head = head.next;
-        }
-        System.out.println(head.val);
-    }
 }
