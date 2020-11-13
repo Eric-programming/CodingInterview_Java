@@ -1,5 +1,7 @@
 package Recursion.p5_700_Search_in_a_BinarySearchTree;
 
+import Utils.TreeNode;
+
 public class p5_700_Search_in_a_BinarySearchTree {
 
     public static void main(String[] args) {
@@ -24,25 +26,6 @@ public class p5_700_Search_in_a_BinarySearchTree {
             return searchBST(root.right, val);// search right side
         } else {
             return searchBST(root.left, val);// search left side
-        }
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 
