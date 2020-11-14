@@ -13,7 +13,44 @@ public class p13_240_Search_a_2D_Matrix_II {
 
     private static int XLENGTH = -1;
     private static int YLENGTH = -1;
+    /**
+     * 
+     * Space Complexity = O(n+m) Time Complexity = O(n+m)
+     */
+    // public static boolean searchMatrix(int[][] matrix, int target) {
+    // YLENGTH = matrix.length;
+    // if (matrix == null || YLENGTH == 0)
+    // return false;
+    // XLENGTH = matrix[0].length;
+    // if (XLENGTH == 0)
+    // return false;
+    // return searchMatrixRecur(matrix, target, XLENGTH - 1, 0);
+    // }
 
+    // private static boolean searchMatrixRecur(int[][] matrix, int target, int x,
+    // int y) {
+    // // Check within range
+    // if (0 > x || 0 > y || XLENGTH - 1 < x || YLENGTH - 1 < y) {
+    // return false;
+    // }
+    // int curPoint = matrix[y][x];
+    // if (target == curPoint)
+    // return true;
+
+    // // move left if target is less than current point
+    // if (target < curPoint) {
+    // return searchMatrixRecur(matrix, target, x - 1, y);
+    // }
+    // // move down if target is more than current point
+    // else {
+    // return searchMatrixRecur(matrix, target, x, y + 1);
+    // }
+
+    // }
+    /**
+     * 
+     * Space Complexity = O(1) Time Complexity = O(n+m)
+     */
     public static boolean searchMatrix(int[][] matrix, int target) {
         YLENGTH = matrix.length;
         if (matrix == null || YLENGTH == 0)
@@ -21,26 +58,24 @@ public class p13_240_Search_a_2D_Matrix_II {
         XLENGTH = matrix[0].length;
         if (XLENGTH == 0)
             return false;
-        return searchMatrixRecur(matrix, target, XLENGTH - 1, 0);
-    }
-
-    private static boolean searchMatrixRecur(int[][] matrix, int target, int x, int y) {
-        // Check within range
-        if (0 > x || 0 > y || XLENGTH - 1 < x || YLENGTH - 1 < y) {
-            return false;
+        int x = XLENGTH - 1;
+        int y = 0;
+        int curVal;
+        while (0 <= x && x < XLENGTH && 0 <= y && y < YLENGTH) {
+            curVal = matrix[y][x];
+            // check current point
+            if (curVal == target) {
+                return true;
+            }
+            // move left if target is less than current point
+            if (target < curVal) {
+                x--;
+            }
+            // move down if target is more than current point
+            if (target > curVal) {
+                y++;
+            }
         }
-        int curPoint = matrix[y][x];
-        if (target == curPoint)
-            return true;
-
-        // target is smaller then move left
-        if (target < curPoint) {
-            return searchMatrixRecur(matrix, target, x - 1, y);
-        }
-        // Target is bigger then move down
-        else {
-            return searchMatrixRecur(matrix, target, x, y + 1);
-        }
-
+        return false;
     }
 }
