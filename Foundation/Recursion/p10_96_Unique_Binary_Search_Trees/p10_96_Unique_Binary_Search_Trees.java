@@ -9,7 +9,7 @@ public class p10_96_Unique_Binary_Search_Trees {
 
     }
 
-    // Get total combinations
+    // Get total combinations for the given n
     public static int numTrees(int n) {
         if (n == 0) {
             return 1;
@@ -24,7 +24,8 @@ public class p10_96_Unique_Binary_Search_Trees {
         return totalCombinations;
     }
 
-    public static int AllCombinationsForCurrentRoot(int root, int totalNodes) {
+    // Get total combinations for given root
+    private static int AllCombinationsForCurrentRoot(int root, int totalNodes) {
         return numTrees(root - 1) * numTrees(totalNodes - root);
     }
 

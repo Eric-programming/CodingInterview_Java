@@ -16,6 +16,10 @@ public class p8_21_Merge_Two_Sorted_Lists {
         PrintLinkedList.IterateLinkedlist(mergeTwoLists_2(nodeA0, nodeB0));
     }
 
+    /**
+     *
+     * Time Complexity = O(n+m) Space Complexity = O(1)
+     */
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode curNode = new ListNode(-1);
         ListNode res = curNode;
@@ -40,6 +44,10 @@ public class p8_21_Merge_Two_Sorted_Lists {
         return res.next;
     }
 
+    /**
+     *
+     * Time Complexity = O(n+m) Space Complexity = O(n+m)
+     */
     /////////////////////////////////////////////////////////////////////////////////////////
     public static ListNode mergeTwoLists_2(ListNode l1, ListNode l2) {
         if (l1 == null) {
